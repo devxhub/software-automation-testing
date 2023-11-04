@@ -63,3 +63,10 @@ Commit your changes and push them to your fork on GitHub:
 git commit -m "Your meaningful commit message"
 git push origin your-feature-branch
 ```
+
+### 7. Create a Pull Request
+
+- Go to the main repository's "Pull Requests" tab.
+- Click "New Pull Request."
+- Provide a detailed description of your changes.
+- Wait for your pull request to be reviewed and, if necessary, make any requested updates.
