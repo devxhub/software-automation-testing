@@ -28,7 +28,7 @@ To get started, follow these steps:
 ### 1. Getting Started
 
 - Make sure you have Python installed on your system.
-- Familiarize yourself with the project by exploring our [website](link-to-website) and the code in this repository.
+- Familiarize yourself with the project by exploring our [website](https://devxhub.com) and the code in this repository.
 - Review our [coding guidelines](#coding-guidelines) to ensure your contributions align with our standards.
 
 ### 2. Fork the Repository
@@ -40,5 +40,5 @@ Click the "Fork" button on the top right of this repository to create your own c
 Clone your fork to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/DEVxHUB-2023.git
+git clone git clone https://github.com/devxhub/Software-Automation-Testing-Contributor-Program-by-DEVxHUB.git
 
