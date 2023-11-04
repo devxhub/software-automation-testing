@@ -70,3 +70,12 @@ git push origin your-feature-branch
 - Click "New Pull Request."
 - Provide a detailed description of your changes.
 - Wait for your pull request to be reviewed and, if necessary, make any requested updates.
+
+### Coding Guidelines
+
+To maintain code consistency and quality, we have established the following coding guidelines:
+
+- Follow [PEP 8]([https://devxhub.com](https://www.python.org/dev/peps/pep-0008/)) for Python code style.
+- Write clear and concise code comments.
+- Use meaningful variable and function names.
+- Maintain backward compatibility whenever possible.
