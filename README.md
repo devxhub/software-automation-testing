@@ -79,3 +79,11 @@ To maintain code consistency and quality, we have established the following codi
 - Write clear and concise code comments.
 - Use meaningful variable and function names.
 - Maintain backward compatibility whenever possible.
+
+### Communication
+
+If you have questions, need help, or want to discuss project-related matters, you can reach out through the following channels:
+
+- **GitHub Issues:** Use the "Issues" tab in this repository for bug reports and feature requests.
+- **Discussions:** Start or participate in discussions in the "Discussions" section of this repository.
+- **Email:** You can email us at [fagun.devxhub@gmail.com](fagun.devxhub@gmail.com)
