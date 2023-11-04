@@ -1,0 +1,101 @@
+# DEVxHUB 2023 Automation Testing Documentation
+
+This documentation provides a comprehensive guide for the Software Automation Testing Contributor Program by DEVxHUB in 2023. It explains the structure and usage of an automation testing script. The script is designed to automate testing tasks for the DEVxHUB application, and it uses Python, Selenium, and the HtmlTestRunner library. We will cover the following sections:
+
+1. **Introduction:**
+   - Purpose of Automation Testing
+   - Technologies Used
+   - Test Scenarios
+
+2. **Setting up the Test Environment:**
+   - Prerequisites
+   - Installation
+   - Configuration
+
+3. **Script Overview:**
+   - Test Structure
+   - Logging
+   - Browser Setup
+   - Test Cases
+
+4. **Running the Tests:**
+   - Test Execution
+   - Test Reports
+
+## 1. Introduction
+
+### Purpose of Automation Testing
+Automation testing is a critical component of the DEVxHUB software development lifecycle. It helps ensure the quality, functionality, and performance of the application by automating repetitive test cases and scenarios.
+
+### Technologies Used
+The automation testing script leverages the following technologies:
+- Python
+- Selenium
+- HTMLTestRunner
+
+### Test Scenarios
+The script covers the following test scenarios:
+- Boundary value testing
+- Negative test cases
+- Performance testing (placeholder)
+- Security testing (placeholder)
+
+## 2. Setting up the Test Environment
+
+### Prerequisites
+Before running the script, make sure you have the following prerequisites installed:
+- Python
+- Selenium WebDriver (Chrome or Firefox)
+- HtmlTestRunner library
+
+### Installation
+To install the required Python libraries, use the following commands:
+```bash
+pip install selenium
+pip install html-testRunner
+```
+
+### Configuration
+The test script uses a configuration file `config.json` to store the base URL and browser choice. Make sure to configure this file properly.
+
+## 3. Script Overview
+
+### Test Structure
+The script is organized as a Python unittest test case, and it consists of the following key components:
+- Import statements for necessary libraries and modules
+- `setUpClass`: Setting up the test environment
+- Test methods: Containing the actual test scenarios
+- `tearDownClass`: Cleaning up resources after all tests have run
+
+### Logging
+The script uses logging to record test execution information. Logs are stored in a file named `test.log`.
+
+### Browser Setup
+The script supports both Chrome and Firefox browsers for testing. The `setup_driver` method is responsible for initializing the selected browser.
+
+### Test Cases
+1. `test_boundary_value`: Tests boundary value conditions.
+2. `test_negative_case`: Tests negative scenarios.
+3. `test_performance`: A placeholder for performance testing.
+4. `test_security`: A placeholder for security testing.
+5. `test_open_website_and_scenario1`: Opens the DEVxHUB website and performs scenario 1.
+6. `test_scroll_to_footer_and_scenario2`: Scrolls to the website's footer and performs scenario 2.
+7. `test_click_company_dropdown_and_scenario3`: Clicks on the Company Dropdown Button and performs scenario 3.
+8. `test_click_career_button_and_scenario4`: Navigates directly to the Career Page URL and performs scenario 4.
+
+## 4. Running the Tests
+
+### Test Execution
+To execute the tests, use the following command:
+```bash
+python <script_name.py>
+```
+
+### Test Reports
+Test results are saved in an HTML report with a timestamp. You can find the reports in the "test-reports" directory. The report title is "DEVxHUB Automation Testing Report". 
+
+After running the tests, check the reports to see the detailed results. If all tests pass successfully, you will see the message "All tests passed successfully." If there are failures, review the report for details on which tests failed.
+
+---
+
+This documentation should help you understand and utilize the automation testing script effectively for the DEVxHUB 2023 Software Automation Testing Contributor Program. If you encounter any issues or need further assistance, please don't hesitate to reach out to the DEVxHUB testing team. Good luck with your testing contributions!
