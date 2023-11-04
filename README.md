@@ -1,5 +1,7 @@
 # Software Automation Testing Contributor Program by DEVxHUB 2023
 
+![DEVxHUB Logo](https://devxhub.com/_nuxt/DEVxHUB_Logo.50e7acc9.webp)
+
 Welcome to the Software Automation Testing Contributor Program by DEVxHUB! We are excited to have you contribute to our project, which focuses on Automation Software Testing using Python. This README will guide you on how to join, contribute, and be a part of our growing community.
 
 ## Table of Contents
