@@ -75,7 +75,7 @@ git push origin your-feature-branch
 
 To maintain code consistency and quality, we have established the following coding guidelines:
 
-- Follow [PEP 8]([https://devxhub.com](https://www.python.org/dev/peps/pep-0008/)) for Python code style.
+- Follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python code style.
 - Write clear and concise code comments.
 - Use meaningful variable and function names.
 - Maintain backward compatibility whenever possible.
