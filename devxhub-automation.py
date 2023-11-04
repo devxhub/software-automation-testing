@@ -8,7 +8,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
 from HtmlTestRunner import HTMLTestRunner
-from zapv2 import ZAPv2
+
+# Define a custom HTMLTestRunner with a custom title
+class CustomHTMLTestRunner(HTMLTestRunner):
+    def _generate_report_name(self):
+        return self.report_name
+
+    class CustomHTMLTestRunner(HTMLTestRunner):
+        def __init__(self, **kwargs):
+            super(CustomHTMLTestRunner, self).__init__(**kwargs)
+            self.title = 'DEVxHUB Automation Testing Report'  # Custom report title
 
 class TestDevxHub(unittest.TestCase):
     @classmethod
@@ -26,9 +35,10 @@ class TestDevxHub(unittest.TestCase):
         with open("config.json") as config_file:
             config = json.load(config_file)
 
+        cls.base_url = config["base_url"]  # Store base_url for later use
         cls.browser = config["browser"]
         cls.driver = cls.setup_driver(cls.browser)
-        cls.driver.get(config["base_url"])
+        cls.driver.get(cls.base_url)
         cls.driver.maximize_window()
         cls.wait = WebDriverWait(cls.driver, 10)
 
@@ -41,36 +51,63 @@ class TestDevxHub(unittest.TestCase):
         else:
             raise Exception("Invalid browser specified in the configuration.")
 
-    def test_title(self):
-        self.logger.info("Running test_title")
-        self.wait.until(EC.title_contains("DevxHub"))
-        actual_title = self.driver.title
-        self.assertEqual("DevxHub", actual_title, "Page title does not match the expected title")
+    def create_scenario(self, scenario_name):
+        scenario_report = self.subTest(scenario_name=scenario_name)
+        scenario_report.report_title = f"{self.__class__.__name__} - {scenario_name}"
+        return scenario_report
 
     def test_boundary_value(self):
-        self.logger.info("Running test_boundary_value")
-        # Example of a boundary test (assuming some boundary condition)
-        self.wait.until(EC.presence_of_element_located((By.ID, "boundaryElement")))
-        # Perform a test for a boundary condition here
-        # self.assertEqual(result, expected_result, "Test failed")
+        with self.create_scenario("Boundary Value Testing"):
+            self.logger.info("Running test_boundary_value")
+            boundary_element = self.wait.until(EC.presence_of_element_located((By.ID, "boundaryElement")))
+            self.assertTrue(self.is_boundary_condition_satisfied(boundary_element), "Boundary test failed")
 
     def test_negative_case(self):
-        self.logger.info("Running test_negative_case")
-        # Example of a negative test case
-        self.wait.until(EC.presence_of_element_located((By.ID, "nonExistentElement")))
-        # Perform a negative test here
-        # self.assertTrue(condition, "Test failed")
+        with self.create_scenario("Negative Test Cases"):
+            self.logger.info("Running test_negative_case")
+            non_existent_element = self.wait.until(EC.presence_of_element_located((By.ID, "nonExistentElement")))
+            self.assertTrue(self.is_negative_scenario_successful(non_existent_element), "Negative test failed")
 
     def test_performance(self):
-        self.logger.info("Running test_performance")
-        # Implement performance testing here (e.g., page load time, response time)
-        # You can use libraries like Selenium performance plugin or JMeter for more advanced performance testing.
+        with self.create_scenario("Performance Testing"):
+            self.logger.info("Running test_performance")
+            # Implement performance testing using a performance testing tool or library
+            # Example: Use Locust to simulate load and measure response times
 
     def test_security(self):
-        self.logger.info("Running test_security")
-        # Initialize ZAP proxy
-        zap = ZAPv2()
-        # Implement security testing using ZAP or another security testing tool
+        with self.create_scenario("Security Testing"):
+            self.logger.info("Running test_security")
+            # Initialize ZAP proxy or other security testing tools
+            # Perform various security tests, like scanning for vulnerabilities and penetration testing
+
+    def test_open_website_and_scenario1(self):
+        with self.create_scenario("Scenario 1 - Open Website"):
+            self.logger.info("Opening the target website")
+            self.driver.get(self.base_url)
+            # Add assertions or verifications if needed
+
+    def test_scroll_to_footer_and_scenario2(self):
+        with self.create_scenario("Scenario 2 - Scroll to Footer"):
+            self.logger.info("Scrolling to the footer")
+            footer_element = self.wait.until(
+                EC.presence_of_element_located((By.XPATH, '//*[@id="__nuxt"]/div/div[2]/section/div[2]/div/div/div')))
+            self.driver.execute_script("arguments[0].scrollIntoView();", footer_element)
+            # Add assertions or verifications if needed
+
+    def test_click_company_dropdown_and_scenario3(self):
+        with self.create_scenario("Scenario 3 - Click Company Dropdown"):
+            self.logger.info("Clicking on the Company Dropdown Button")
+            company_dropdown_button = self.wait.until(
+                EC.presence_of_element_located((By.XPATH, '//*[@id="__nuxt"]/div/div[1]/div/div/ul/li[1]/p/span')))
+            company_dropdown_button.click()
+            # Add assertions or verifications if needed
+
+    def test_click_career_button_and_scenario4(self):
+        with self.create_scenario("Scenario 4 - Click Career Button"):
+            self.logger.info("Navigating directly to the Career Page URL")
+            career_url = "https://devxhub.com/career"
+            self.driver.get(career_url)
+            # Add assertions or verifications if needed
 
     @classmethod
     def tearDownClass(cls):
@@ -81,13 +118,21 @@ if __name__ == "__main__":
     if not os.path.exists(report_dir):
         os.makedirs(report_dir)
 
-    now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    now = datetime.now().strftime("%Y-%m-%d %H-%M-%S")  # Replace colons with hyphens
     report_name = f"DevxHubTestReport_{now}.html"
 
     suite = unittest.TestLoader().loadTestsFromTestCase(TestDevxHub)
 
-    # Create an HTMLTestRunner object with the custom report title and verbosity set to 2
-    runner = HTMLTestRunner(output=report_dir, report_title="DEVxHUB Automation Testing Report", verbosity=2)
+    # Create a custom HTMLTestRunner object with custom title
+    runner = CustomHTMLTestRunner(
+        output=report_dir,
+        report_name=report_name,
+        stream=open(os.devnull, 'w'),  # Disable stdout during the test run
+        descriptions="Detailed Test Results by Scenario",
+        combine_reports=True,  # Combine results of subtests into a single report
+        add_timestamp=True,  # Add timestamp to the report
+        open_in_browser=True,  # Open the report in the default web browser
+    )
 
     # Run the test suite and save the report as an HTML file
     result = runner.run(suite)
