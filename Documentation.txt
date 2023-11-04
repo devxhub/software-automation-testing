@@ -64,7 +64,7 @@ The script is organized as a Python unittest test case, and it consists of the f
 - Import statements for necessary libraries and modules
 - 𝘀𝗲𝘁𝗨𝗽𝗖𝗹𝗮𝘀𝘀: Setting up the test environment
 - 𝗧𝗲𝘀𝘁 𝗺𝗲𝘁𝗵𝗼𝗱𝘀: Containing the actual test scenarios
--𝘁𝗲𝗮𝗿𝗗𝗼𝘄𝗻𝗖𝗹𝗮𝘀𝘀: Cleaning up resources after all tests have run
+- 𝘁𝗲𝗮𝗿𝗗𝗼𝘄𝗻𝗖𝗹𝗮𝘀𝘀: Cleaning up resources after all tests have run
 
 𝗟𝗼𝗴𝗴𝗶𝗻𝗴
 The script uses logging to record test execution information. Logs are stored in a file named `test.log`.
