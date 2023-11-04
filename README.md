@@ -50,3 +50,16 @@ Create a new branch for your contribution. Use a descriptive branch name that re
 ```bash
 git checkout -b your-feature-branch
 ```
+
+### 5. Make Your Contribution
+
+Make your desired changes and improvements to the project. Be sure to adhere to the coding guidelines.
+
+### 6. Commit and Push 
+
+Commit your changes and push them to your fork on GitHub:
+
+```bash
+git commit -m "Your meaningful commit message"
+git push origin your-feature-branch
+```
