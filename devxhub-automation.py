@@ -1,30 +1,39 @@
 import os
 import unittest
-import logging
 import json
+import logging
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
-
-# Set up logging
-log_filename = "test.log"
-logging.basicConfig(filename=log_filename, level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+from HtmlTestRunner import HTMLTestRunner
+from zapv2 import ZAPv2
 
 class TestDevxHub(unittest.TestCase):
-    def setUp(self):
+    @classmethod
+    def setUpClass(cls):
+        cls.logger = logging.getLogger(cls.__name__)
+        cls.logger.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+        # Log to a file
+        file_handler = logging.FileHandler('test.log')
+        file_handler.setFormatter(formatter)
+        cls.logger.addHandler(file_handler)
+
         # Load configuration from a JSON file
         with open("config.json") as config_file:
             config = json.load(config_file)
 
-        browser = config["browser"]
-        self.driver = self.setup_driver(browser)
-        self.driver.get(config["base_url"])
-        self.driver.maximize_window()
-        self.wait = WebDriverWait(self.driver, 10)
+        cls.browser = config["browser"]
+        cls.driver = cls.setup_driver(cls.browser)
+        cls.driver.get(config["base_url"])
+        cls.driver.maximize_window()
+        cls.wait = WebDriverWait(cls.driver, 10)
 
-    def setup_driver(self, browser):
+    @classmethod
+    def setup_driver(cls, browser):
         if browser == "chrome":
             return webdriver.Chrome()
         elif browser == "firefox":
@@ -33,12 +42,39 @@ class TestDevxHub(unittest.TestCase):
             raise Exception("Invalid browser specified in the configuration.")
 
     def test_title(self):
+        self.logger.info("Running test_title")
         self.wait.until(EC.title_contains("DevxHub"))
         actual_title = self.driver.title
         self.assertEqual("DevxHub", actual_title, "Page title does not match the expected title")
 
-    def tearDown(self):
-        self.driver.quit()
+    def test_boundary_value(self):
+        self.logger.info("Running test_boundary_value")
+        # Example of a boundary test (assuming some boundary condition)
+        self.wait.until(EC.presence_of_element_located((By.ID, "boundaryElement")))
+        # Perform a test for a boundary condition here
+        # self.assertEqual(result, expected_result, "Test failed")
+
+    def test_negative_case(self):
+        self.logger.info("Running test_negative_case")
+        # Example of a negative test case
+        self.wait.until(EC.presence_of_element_located((By.ID, "nonExistentElement")))
+        # Perform a negative test here
+        # self.assertTrue(condition, "Test failed")
+
+    def test_performance(self):
+        self.logger.info("Running test_performance")
+        # Implement performance testing here (e.g., page load time, response time)
+        # You can use libraries like Selenium performance plugin or JMeter for more advanced performance testing.
+
+    def test_security(self):
+        self.logger.info("Running test_security")
+        # Initialize ZAP proxy
+        zap = ZAPv2()
+        # Implement security testing using ZAP or another security testing tool
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
 
 if __name__ == "__main__":
     report_dir = "test-reports"
@@ -50,48 +86,14 @@ if __name__ == "__main__":
 
     suite = unittest.TestLoader().loadTestsFromTestCase(TestDevxHub)
 
-    # Define custom report variables
-    test_results = []
+    # Create an HTMLTestRunner object with the custom report title and verbosity set to 2
+    runner = HTMLTestRunner(output=report_dir, report_title="DEVxHUB Automation Testing Report", verbosity=2)
 
-    with open(os.path.join(report_dir, report_name), "w", encoding="utf-8") as output:
-        custom_title = "Software Automation Testing Contributor Program by DEVxHUB 2023"
-        custom_report = f'''
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>{custom_title}</title>
-        </head>
-        <body>
-            <h1>{custom_title}</h1>
-            <p>Test Results:</p>
-            <table>
-                <tr>
-                    <th>Test Case</th>
-                    <th>Result</th>
-                </tr>
-        '''
+    # Run the test suite and save the report as an HTML file
+    result = runner.run(suite)
 
-        output.write(custom_report)
-
-        for test in suite:
-            result = unittest.TextTestResult(output, descriptions=True, verbosity=2)
-            test(result)
-            status = "Passed" if result.wasSuccessful() else "Failed"
-            test_results.append((test, status))
-
-        for test, status in test_results:
-            custom_report = f'''
-                <tr>
-                    <td>{test.id()}</td>
-                    <td>{status}</td>
-                </tr>
-            '''
-            output.write(custom_report)
-
-        custom_report = '''
-            </table>
-        </body>
-        </html>
-        '''
-
-        output.write(custom_report)
+    # Calculate and display the overall test suite success message
+    if result.wasSuccessful():
+        print("All tests passed successfully.")
+    else:
+        print("Some tests failed. Check the test reports for details.")
