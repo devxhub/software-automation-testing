@@ -86,4 +86,4 @@ If you have questions, need help, or want to discuss project-related matters, yo
 
 - **GitHub Issues:** Use the "Issues" tab in this repository for bug reports and feature requests.
 - **Discussions:** Start or participate in discussions in the "Discussions" section of this repository.
-- **Email:** You can email us at [fagun.devxhub@gmail.com](fagun.devxhub@gmail.com)
+- **Email:** You can email us at fagun.devxhub@gmail.com .
