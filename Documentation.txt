@@ -1,79 +1,78 @@
-# DEVxHUB 2023 Automation Testing Documentation
+ＤＥＶｘＨＵＢ  ２０２３  Ａｕｔｏｍａｔｉｏｎ  Ｔｅｓｔｉｎｇ  Ｄｏｃｕｍｅｎｔａｔｉｏｎ
 
-This documentation provides a comprehensive guide for the Software Automation Testing Contributor Program by DEVxHUB in 2023. It explains the structure and usage of an automation testing script. The script is designed to automate testing tasks for the DEVxHUB application, and it uses Python, Selenium, and the HtmlTestRunner library. We will cover the following sections:
+This documentation provides a comprehensive guide for the𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗔𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝗼𝗻 𝗧𝗲𝘀𝘁𝗶𝗻𝗴 𝗖𝗼𝗻𝘁𝗿𝗶𝗯𝘂𝘁𝗼𝗿 𝗣𝗿𝗼𝗴𝗿𝗮𝗺 𝗯𝘆 𝗗𝗘𝗩𝘅𝗛𝗨𝗕 𝗶𝗻 𝟮𝟬𝟮𝟯. It explains the structure and usage of an automation testing script. The script is designed to automate testing tasks for the 𝗗𝗘𝗩𝘅𝗛𝗨𝗕 application, and it uses 𝗣𝘆𝘁𝗵𝗼𝗻, 𝗦𝗲𝗹𝗲𝗻𝗶𝘂𝗺, 𝗮𝗻𝗱 𝘁𝗵𝗲 𝗛𝘁𝗺𝗹𝗧𝗲𝘀𝘁𝗥𝘂𝗻𝗻𝗲𝗿 𝗹𝗶𝗯𝗿𝗮𝗿𝘆. We will cover the following sections:
 
-1. **Introduction:**
+1. 𝗜𝗻𝘁𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻:
    - Purpose of Automation Testing
    - Technologies Used
    - Test Scenarios
 
-2. **Setting up the Test Environment:**
+2. 𝗦𝗲𝘁𝘁𝗶𝗻𝗴 𝘂𝗽 𝘁𝗵𝗲 𝗧𝗲𝘀𝘁 𝗘𝗻𝘃𝗶𝗿𝗼𝗻𝗺𝗲𝗻𝘁:
    - Prerequisites
    - Installation
    - Configuration
 
-3. **Script Overview:**
+3. 𝗦𝗰𝗿𝗶𝗽𝘁 𝗢𝘃𝗲𝗿𝘃𝗶𝗲𝘄:
    - Test Structure
    - Logging
    - Browser Setup
    - Test Cases
 
-4. **Running the Tests:**
+4. 𝗥𝘂𝗻𝗻𝗶𝗻𝗴 𝘁𝗵𝗲 𝗧𝗲𝘀𝘁𝘀:
    - Test Execution
    - Test Reports
 
-## 1. Introduction
+𝟭. 𝗜𝗻𝘁𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻
 
-### Purpose of Automation Testing
-Automation testing is a critical component of the DEVxHUB software development lifecycle. It helps ensure the quality, functionality, and performance of the application by automating repetitive test cases and scenarios.
+𝗣𝘂𝗿𝗽𝗼𝘀𝗲 𝗼𝗳 𝗔𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝗼𝗻 𝗧𝗲𝘀𝘁𝗶𝗻𝗴
+Automation testing is a critical component of the 𝗗𝗘𝗩𝘅𝗛𝗨𝗕 software development lifecycle. It helps ensure the quality, functionality, and performance of the application by automating repetitive test cases and scenarios.
 
-### Technologies Used
+𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝗶𝗲𝘀 𝗨𝘀𝗲𝗱
 The automation testing script leverages the following technologies:
 - Python
 - Selenium
 - HTMLTestRunner
 
-### Test Scenarios
+𝗧𝗲𝘀𝘁 𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼𝘀
 The script covers the following test scenarios:
 - Boundary value testing
 - Negative test cases
 - Performance testing (placeholder)
 - Security testing (placeholder)
 
-## 2. Setting up the Test Environment
+𝟮. 𝗦𝗲𝘁𝘁𝗶𝗻𝗴 𝘂𝗽 𝘁𝗵𝗲 𝗧𝗲𝘀𝘁 𝗘𝗻𝘃𝗶𝗿𝗼𝗻𝗺𝗲𝗻𝘁
 
-### Prerequisites
+𝗣𝗿𝗲𝗿𝗲𝗾𝘂𝗶𝘀𝗶𝘁𝗲𝘀
 Before running the script, make sure you have the following prerequisites installed:
 - Python
 - Selenium WebDriver (Chrome or Firefox)
 - HtmlTestRunner library
 
-### Installation
+𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝗮𝘁𝗶𝗼𝗻
 To install the required Python libraries, use the following commands:
-```bash
-pip install selenium
-pip install html-testRunner
-```
 
-### Configuration
-The test script uses a configuration file `config.json` to store the base URL and browser choice. Make sure to configure this file properly.
+𝐩𝐢𝐩 𝐢𝐧𝐬𝐭𝐚𝐥𝐥 𝐬𝐞𝐥𝐞𝐧𝐢𝐮𝐦
+𝐩𝐢𝐩 𝐢𝐧𝐬𝐭𝐚𝐥𝐥 𝐡𝐭𝐦𝐥-𝐭𝐞𝐬𝐭𝐑𝐮𝐧𝐧𝐞𝐫
 
-## 3. Script Overview
+𝗖𝗼𝗻𝗳𝗶𝗴𝘂𝗿𝗮𝘁𝗶𝗼𝗻
+The test script uses a configuration file `𝗰𝗼𝗻𝗳𝗶𝗴.𝗷𝘀𝗼𝗻` to store the base URL and browser choice. Make sure to configure this file properly.
 
-### Test Structure
+𝟯. 𝗦𝗰𝗿𝗶𝗽𝘁 𝗢𝘃𝗲𝗿𝘃𝗶𝗲𝘄
+
+𝗧𝗲𝘀𝘁 𝗦𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲
 The script is organized as a Python unittest test case, and it consists of the following key components:
 - Import statements for necessary libraries and modules
-- `setUpClass`: Setting up the test environment
-- Test methods: Containing the actual test scenarios
-- `tearDownClass`: Cleaning up resources after all tests have run
+- 𝘀𝗲𝘁𝗨𝗽𝗖𝗹𝗮𝘀𝘀: Setting up the test environment
+- 𝗧𝗲𝘀𝘁 𝗺𝗲𝘁𝗵𝗼𝗱𝘀: Containing the actual test scenarios
+-𝘁𝗲𝗮𝗿𝗗𝗼𝘄𝗻𝗖𝗹𝗮𝘀𝘀: Cleaning up resources after all tests have run
 
-### Logging
+𝗟𝗼𝗴𝗴𝗶𝗻𝗴
 The script uses logging to record test execution information. Logs are stored in a file named `test.log`.
 
-### Browser Setup
+𝗕𝗿𝗼𝘄𝘀𝗲𝗿 𝗦𝗲𝘁𝘂𝗽
 The script supports both Chrome and Firefox browsers for testing. The `setup_driver` method is responsible for initializing the selected browser.
 
-### Test Cases
+𝗧𝗲𝘀𝘁 𝗖𝗮𝘀𝗲𝘀
 1. `test_boundary_value`: Tests boundary value conditions.
 2. `test_negative_case`: Tests negative scenarios.
 3. `test_performance`: A placeholder for performance testing.
@@ -83,19 +82,19 @@ The script supports both Chrome and Firefox browsers for testing. The `setup_dri
 7. `test_click_company_dropdown_and_scenario3`: Clicks on the Company Dropdown Button and performs scenario 3.
 8. `test_click_career_button_and_scenario4`: Navigates directly to the Career Page URL and performs scenario 4.
 
-## 4. Running the Tests
+𝟰. 𝗥𝘂𝗻𝗻𝗶𝗻𝗴 𝘁𝗵𝗲 𝗧𝗲𝘀𝘁𝘀
 
-### Test Execution
+𝗧𝗲𝘀𝘁 𝗘𝘅𝗲𝗰𝘂𝘁𝗶𝗼𝗻
 To execute the tests, use the following command:
-```bash
-python <script_name.py>
-```
 
-### Test Reports
+𝗽𝘆𝘁𝗵𝗼𝗻 <𝘀𝗰𝗿𝗶𝗽𝘁_𝗻𝗮𝗺𝗲.𝗽𝘆>
+
+
+𝗧𝗲𝘀𝘁 𝗥𝗲𝗽𝗼𝗿𝘁𝘀
 Test results are saved in an HTML report with a timestamp. You can find the reports in the "test-reports" directory. The report title is "DEVxHUB Automation Testing Report". 
 
 After running the tests, check the reports to see the detailed results. If all tests pass successfully, you will see the message "All tests passed successfully." If there are failures, review the report for details on which tests failed.
 
 ---
 
-This documentation should help you understand and utilize the automation testing script effectively for the DEVxHUB 2023 Software Automation Testing Contributor Program. If you encounter any issues or need further assistance, please don't hesitate to reach out to the DEVxHUB testing team. Good luck with your testing contributions!
+This documentation should help you understand and utilize the automation testing script effectively for the DEVxHUB 2023 Software Automation Testing Contributor Program. If you encounter any issues or need further assistance, please don't hesitate to reach out to the 𝗗𝗘𝗩𝘅𝗛𝗨𝗕 𝘁𝗲𝘀𝘁𝗶𝗻𝗴 𝘁𝗲𝗮𝗺. Good luck with your testing contributions!
