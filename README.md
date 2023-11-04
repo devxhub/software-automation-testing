@@ -41,6 +41,7 @@ Clone your fork to your local machine using the following command:
 
 ```bash
 git clone git clone https://github.com/devxhub/Software-Automation-Testing-Contributor-Program-by-DEVxHUB.git
+```
 
 **### 4. Create a New Branch**
 
@@ -48,3 +49,4 @@ Create a new branch for your contribution. Use a descriptive branch name that re
 
 ```bash
 git checkout -b your-feature-branch
+```
