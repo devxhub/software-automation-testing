@@ -87,3 +87,9 @@ If you have questions, need help, or want to discuss project-related matters, yo
 - **GitHub Issues:** Use the "Issues" tab in this repository for bug reports and feature requests.
 - **Discussions:** Start or participate in discussions in the "Discussions" section of this repository.
 - **Email:** You can email us at fagun.devxhub@gmail.com .
+
+### License
+
+This project is licensed under the [MIT License](https://github.com/devxhub/Software-Automation-Testing-Contributor-Program-by-DEVxHUB/blob/main/LICENSE). By contributing to this project, you agree to abide by the terms of this license.
+
+We look forward to your contributions, and thank you for joining our Software Automation Testing Contributor Program! Together, we can make a difference in the world of automation testing.
