@@ -4,7 +4,7 @@
   <img src="https://live.staticflickr.com/65535/51304040408_fdb0c064ee.jpg" alt="DEVxHUB Logo" width="200" height="200">
 </p>
 
-Welcome to the Software Automation Testing Contributor Program by  [DEVxHUB](https://devxhub.com)! We are excited to have you contribute to our project, which focuses on Automation Software Testing using Python. This README will guide you on how to join, contribute, and be a part of our growing community.
+Welcome to the **Software Automation Testing Contributor Program** by  [DEVxHUB](https://devxhub.com)! We are excited to have you contribute to our project, which focuses on **Automation Software Testing using Python**. This README will guide you on how to join, contribute, and be a part of our growing community.
 
 ## Table of Contents
 
