@@ -43,7 +43,7 @@ Clone your fork to your local machine using the following command:
 git clone git clone https://github.com/devxhub/Software-Automation-Testing-Contributor-Program-by-DEVxHUB.git
 ```
 
-**### 4. Create a New Branch**
+### 4. Create a New Branch
 
 Create a new branch for your contribution. Use a descriptive branch name that reflects the nature of your work:
 
