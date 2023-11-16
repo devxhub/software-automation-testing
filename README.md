@@ -6,15 +6,12 @@
 
 Welcome to the **Software Automation Testing Contributor Program** by  [DEVxHUB](https://devxhub.com)! We are excited to have you contribute to our project, which focuses on **Automation Software Testing using Python**. This README will guide you on how to join, contribute, and be a part of our growing community.
 
-<p align="center">
-  <img src="https://your-logo-url-here" alt="Awesome Test Automation" width="300" />
-</p>
 
 <h1 align="center">Software Automation Testing</h1>
 
 <p align="center">
   A curated list of incredible test automation frameworks, tools, libraries, and software for diverse programming languages. 
-  <br/>Sponsored by <a href="https://zapple.tech">Zapple Tech</a> 🚀
+  <br/>Sponsored by <a href="https://devxhub.com">DEVxHUB</a> 🚀
 </p>
 
 <p align="center">
