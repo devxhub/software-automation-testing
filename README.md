@@ -20,17 +20,17 @@ Welcome to the **Software Automation Testing Contributor Program** by  [DEVxHUB]
 
 ## 📚 Categories
 
-- [🐍 Python Test Automation](#python-test-automation)
-- [☕ Java Test Automation](#java-test-automation)
-- [💎 Ruby Test Automation](#ruby-test-automation)
-- [🔷 C# Test Automation](#c-test-automation)
-- [🔶 PHP Test Automation](#php-test-automation)
-- [🟡 JavaScript Test Automation](#javascript-test-automation)
-- [🟣 Kotlin Test Automation](#kotlin-test-automation)
+- [🐍 Python](#python-test-automation)
+- [☕ Java](#java-test-automation)
+- [💎 Ruby](#ruby-test-automation)
+- [🔷 C#](#c-test-automation)
+- [🔶 PHP](#php-test-automation)
+- [🟡 JavaScript](#javascript-test-automation)
+- [🟣 Kotlin](#kotlin-test-automation)
 - [📦 Test Automation & Software Testing as Services](#test-automation-and-software-testing-as-services)
-- [📱 Mobile, Tablet, & TV Test Automation](#mobile-tablet-and-tv-test-automation)
-- [🛠️ General Purpose Test Automation Tools](#general-purpose-test-automation-tools)
-- [📝 Practical Test Automation by Examples](#practical-test-automation-by-examples)
+- [📱 Mobile, Tablet](#mobile-tablet-and-tv-test-automation)
+- [🛠️ Purpose Testing Tools](#general-purpose-test-automation-tools)
+- [📝 Practical Test Automation](#practical-test-automation-by-examples)
 
 ## 🌟 Contents
 
