@@ -6,74 +6,77 @@
 
 Welcome to the **Software Automation Testing Contributor Program** by  [DEVxHUB](https://devxhub.com)! We are excited to have you contribute to our project, which focuses on **Automation Software Testing using Python**. This README will guide you on how to join, contribute, and be a part of our growing community.
 
-## Table of Contents
+<p align="center">
+  <img src="https://your-logo-url-here" alt="Awesome Test Automation" width="300" />
+</p>
 
-- [About the Project](#about-the-project)
-- [How to Contribute](#how-to-contribute)
-  - [Getting Started](#1-getting-started)
-  - [Fork the Repository](#2-fork-the-repository)
-  - [Clone Your Fork](#3-clone-your-fork)
-  - [Create a New Branch](#4-create-a-new-branch)
-  - [Make Your Contribution](#5-make-your-contribution)
-  - [Commit and Push](#6-commit-and-push)
-  - [Create a Pull Request](#7-create-a-pull-request)
-- [Coding Guidelines](#coding-guidelines)
-- [Communication](#communication)
-- [License](#license)
+<h1 align="center">Awesome Test Automation</h1>
 
-## About the Project
+<p align="center">
+  A curated list of incredible test automation frameworks, tools, libraries, and software for diverse programming languages. 
+  <br/>Sponsored by <a href="https://zapple.tech">Zapple Tech</a> 🚀
+</p>
 
-Our project is focused on Automation Software Testing using Python. We are constantly looking for contributors who are passionate about improving and extending the capabilities of our testing tools. Your contributions can include bug fixes, feature enhancements, documentation improvements, and more.
+<p align="center">
+  Have questions, issues, or ideas? Join us at <a href="https://gitter.im/atinfo/awesome-test-automation">Gitter Chat</a> 💬
+</p>
 
-## How to Contribute
+## 📚 Categories
 
-To get started, follow these steps:
+- [🐍 Python Test Automation](#python-test-automation)
+- [☕ Java Test Automation](#java-test-automation)
+- [💎 Ruby Test Automation](#ruby-test-automation)
+- [🔷 C# Test Automation](#c-test-automation)
+- [🔶 PHP Test Automation](#php-test-automation)
+- [🟡 JavaScript Test Automation](#javascript-test-automation)
+- [🟣 Kotlin Test Automation](#kotlin-test-automation)
+- [📦 Test Automation & Software Testing as Services](#test-automation-and-software-testing-as-services)
+- [📱 Mobile, Tablet, & TV Test Automation](#mobile-tablet-and-tv-test-automation)
+- [🛠️ General Purpose Test Automation Tools](#general-purpose-test-automation-tools)
+- [📝 Practical Test Automation by Examples](#practical-test-automation-by-examples)
 
-### 1. Getting Started
+## 🌟 Contents
 
-- Make sure you have Python installed on your system.
-- Familiarize yourself with the project by exploring our [website](https://devxhub.com) and the code in this repository.
-- Review our [coding guidelines](#coding-guidelines) to ensure your contributions align with our standards.
+### Python Test Automation
+Explore test automation frameworks and tools for Python.
 
-### 2. Fork the Repository
+### Java Test Automation
+Discover solutions optimized for test automation in Java.
 
-Click the "Fork" button on the top right of this repository to create your own copy of the project.
+### Ruby Test Automation
+Resources for test automation in Ruby.
 
-### 3. Clone Your Fork
+### C# Test Automation
+Tools and frameworks for test automation in C#.
 
-Clone your fork to your local machine using the following command:
+### PHP Test Automation
+Discover libraries and tools compatible with PHP.
 
-```bash
-git clone git clone https://github.com/devxhub/Software-Automation-Testing-Contributor-Program-by-DEVxHUB.git
-```
+### JavaScript Test Automation
+Explore JavaScript-centric test automation frameworks.
 
-### 4. Create a New Branch
+### Kotlin Test Automation
+Resources and tools for implementing test automation in Kotlin.
 
-Create a new branch for your contribution. Use a descriptive branch name that reflects the nature of your work:
+### Test Automation & Software Testing as Services
+Services dedicated to test automation and software testing.
 
-```bash
-git checkout -b your-feature-branch
-```
+### Mobile, Tablet, & TV Test Automation
+Tools specialized in automating tests for mobile, tablet, and TV platforms.
 
-### 5. Make Your Contribution
+### General Purpose Test Automation Tools
+Versatile tools suitable for various test automation scenarios.
 
-Make your desired changes and improvements to the project. Be sure to adhere to the coding guidelines.
+### Practical Test Automation by Examples
+Contribute to practical test automation by sharing real-world examples and use cases.
 
-### 6. Commit and Push 
+## 📣 Notifications
 
-Commit your changes and push them to your fork on GitHub:
+Show your support by giving us a star ⭐ and watch this repository for updates!
 
-```bash
-git commit -m "Your meaningful commit message"
-git push origin your-feature-branch
-```
+## 🤝 Contributions
 
-### 7. Create a Pull Request
-
-- Go to the main repository's "Pull Requests" tab.
-- Click "New Pull Request."
-- Provide a detailed description of your changes.
-- Wait for your pull request to be reviewed and, if necessary, make any requested updates.
+We welcome contributions! Fork this repository, add new content, and create pull requests. Your input is invaluable! 🙌
 
 ### Coding Guidelines
 
