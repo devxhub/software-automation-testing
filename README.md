@@ -10,7 +10,7 @@ Welcome to the **Software Automation Testing Contributor Program** by  [DEVxHUB]
   <img src="https://your-logo-url-here" alt="Awesome Test Automation" width="300" />
 </p>
 
-<h1 align="center">Awesome Test Automation</h1>
+<h1 align="center">Software Automation Testing</h1>
 
 <p align="center">
   A curated list of incredible test automation frameworks, tools, libraries, and software for diverse programming languages. 
@@ -18,7 +18,7 @@ Welcome to the **Software Automation Testing Contributor Program** by  [DEVxHUB]
 </p>
 
 <p align="center">
-  Have questions, issues, or ideas? Join us at <a href="https://gitter.im/atinfo/awesome-test-automation">Gitter Chat</a> 💬
+  Have questions, issues, or ideas? Massage me at <a href="https://www.linkedin.com/in/mejbaur/">LinkedIn</a> 💬
 </p>
 
 ## 📚 Categories
