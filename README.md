@@ -30,7 +30,6 @@ Welcome to the **Software Automation Testing Contributor Program** by  [DEVxHUB]
 - [📦 Test Automation & Software Testing as Services](#test-automation-and-software-testing-as-services)
 - [📱 Mobile, Tablet](#mobile-tablet-and-tv-test-automation)
 - [🛠️ Purpose Testing Tools](#general-purpose-test-automation-tools)
-- [📝 Practical Test Automation](#practical-test-automation-by-examples)
 
 ## 🌟 Contents
 
@@ -64,8 +63,6 @@ Tools specialized in automating tests for mobile, tablet, and TV platforms.
 ### General Purpose Test Automation Tools
 Versatile tools suitable for various test automation scenarios.
 
-### Practical Test Automation by Examples
-Contribute to practical test automation by sharing real-world examples and use cases.
 
 ## 📣 Notifications
 
